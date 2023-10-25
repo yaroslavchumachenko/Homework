@@ -1,3 +1,3 @@
 print("hi")
-a = list(1,6)
+a = ["apple", "banana", "palm"]
 print (a)
