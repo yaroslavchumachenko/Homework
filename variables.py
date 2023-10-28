@@ -19,7 +19,7 @@ print(f"Hi {username} {surname}! Welcome to the {group} group!")
 
 # format()
 my_string = "Hi {username} {surname}! Welcome to the {group} group!"
-my_sttring.format(username="Yaroslav", surname="Chumachenko", group="PYTHON 118")
+my_string.format(username="Yaroslav", surname="Chumachenko", group="PYTHON 118")
 
 # %s, %d (Використовувася у Python 2.0)
 
