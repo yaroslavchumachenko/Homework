@@ -1,15 +1,14 @@
-id_text = None
-
 id_text = input("Введіть Transaction ID:")
+new_id=""
 
 id_text = id_text[1:]
 id_text = id_text[:-1]
 print(id_text)
 
 
-#for element in range(len(id_text)):
-#    element += 1
+#for element in id_text:
 #    if element == ";" or element == "%":
 #        pass
 #    else:
-#        print(element)
+#        new_id += element
+#print(new_id)
