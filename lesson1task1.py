@@ -8,8 +8,8 @@ number = random.randint(1,10)
 while answer == False:
     user_number = input("Введіть число від 1 до 10: ")
     if int(user_number) == number:
-        print("Ви вгадали!")
+        print(f"Ви вгадали! Загадане число було {number}!")
         break
     else:
         print("Спробуйте ще раз! \n \n")
-        print(number)
+
