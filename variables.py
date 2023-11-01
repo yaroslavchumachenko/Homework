@@ -39,6 +39,10 @@ group = "PYTHON 118"
 group.split(" ")
 #Creates list with "Python" and "118"
 
+# replace func
+my_string = "Hello World!"
+my_string = my_string.replace("!", "")
+
 #is-else
 if username == "Yaroslav":
     pass #skip this iteration 
