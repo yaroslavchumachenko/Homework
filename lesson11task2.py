@@ -37,6 +37,8 @@ while True:
         user_ans = int(user_ans)
     except ValueError:
         print("Введіть число від 1 до 8!")
+
+# Search by first name
     if user_ans == 1:
         with open("telephone_num.json", "r") as file:
             my_answ = input("Введіть імя особи: ")
@@ -49,6 +51,7 @@ while True:
                         break
                     else: 
                         pass
+# Search by last name 
     elif user_ans == 2:
         with open("telephone_num.json", "r") as file:
             my_answ = input("Введіть прізвище особи: ")
@@ -69,7 +72,7 @@ while True:
                 print("Данних про цю особу не знайдено!")
 
                         
-        
+# Search by full name       
     elif user_ans == 3:
         with open("telephone_num.json", "r") as file:
             my_answ = input("Введіть повне ім'я особи: ")
@@ -88,6 +91,8 @@ while True:
                 pass
             else:
                 print("Данних про цю особу не знайдено!")
+
+# Search by telephone number
     elif user_ans == 4:
         with open("telephone_num.json", "r") as file:
             my_answ = input("Введіть номер особи у форматі (+380ххххххххх): ")
@@ -107,6 +112,7 @@ while True:
             else:
                 print("Данних про цю особу не знайдено!")
 
+# Search by city or state
     elif user_ans == 5:
         with open("telephone_num.json", "r") as file:
             my_answ = input("Введіть місто проживання особи: ")
@@ -125,7 +131,8 @@ while True:
                 pass
             else:
                 print("Данних про цю особу не знайдено!")
-                
+
+# Delete a record for a given telephone number               
     elif user_ans == 6:
         my_answ = input("Введіть номер особи у форматі (+380ххххххххх), запис про яку хочете видалити: ")
         with open("telephone_num.json", "r+") as file:
@@ -143,18 +150,7 @@ while True:
         with open("telephone_num.json", "w+") as file:
             data = json.dump(my_list, file)
 
-        # with open("telephone_num.json", "r+") as file:
-        #     data = json.dump(my_list, file)
-        # print(my_list)
-            
-           
-        # for i in my_list:
-        #     for key, value in i.items():
-        #         if my_answ == i[value]:
-        #             del i
-        # with open("telephone_num.json", "w") as file:
-        #     json.dump(my_list, file)
-        # pass
+# Update a record for a given telephone number  
     elif user_ans == 7:
         my_answ = input("Введіть номер особи у форматі (+380ххххххххх), запис про яку хочете змінити: ")
         with open("telephone_num.json", "r+") as file:
@@ -195,7 +191,9 @@ while True:
                     pass
         with open("telephone_num.json", "w+") as file:
             data = json.dump(my_list, file)
-        print("Запис успішно змінено")     
+        print("Запис успішно змінено") 
+        
+# An option to exit the program    
     elif user_ans == 8:
         print("Дякуємо за використання додатку, гарного дня!")
         break
