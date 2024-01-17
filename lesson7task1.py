@@ -6,10 +6,10 @@ my_string_index = 0
 word_count = 0
 last_index = 0
 my_string = input("Enter your string: ")
+my_string = my_string.lower
 for i in my_string:
     if i == " " and word_count == 0:
         word_list.append(my_string[0:my_string_index])
-
         word_count += 1
         last_index = my_string_index + 1 
     elif i == " " and word_count >= 1:
@@ -26,6 +26,9 @@ for i in word_list:
     else:
         word_dict[i] += 1
 print(word_dict)
+
+# Програма виконує все що треба, просто після останнього слова треба ще вказати пробіл, я не знаю
+# як знайти останній індекс у даному конкретному випадку
 
 
 
