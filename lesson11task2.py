@@ -45,12 +45,18 @@ while True:
             data = json.load(file)
             for i in data:
                 for key, value in i.items():
-                    if value == my_answ:
+                    if i[key] == my_answ and key == "First_name":
                         print("Ось данні про особу що ви просили: ")
                         print(i)
+                        variable += 1
                         break
-                    else: 
+                    elif i[key] != my_answ: 
                         pass
+            if variable > 0:
+                variable = 0
+                pass
+            else:
+                print("Данних про цю особу не знайдено!")
 # Search by last name 
     elif user_ans == 2:
         with open("telephone_num.json", "r") as file:
@@ -58,7 +64,7 @@ while True:
             data = json.load(file)
             for i in data:
                 for key, value in i.items():
-                    if i[key] == my_answ:
+                    if i[key] == my_answ and key == "Last_name":
                         print("Ось данні про особу що ви просили: ")
                         print(i)
                         variable += 1
@@ -79,7 +85,7 @@ while True:
             data = json.load(file)
             for i in data:
                 for key, value in i.items():
-                    if i[key] == my_answ:
+                    if i[key] == my_answ and key == "Full_name":
                         print("Ось данні про особу що ви просили: ")
                         print(i)
                         variable += 1
@@ -99,7 +105,7 @@ while True:
             data = json.load(file)
             for i in data:
                 for key, value in i.items():
-                    if i[key] == my_answ:
+                    if i[key] == my_answ and key == "Number":
                         print("Ось данні про особу що ви просили: ")
                         print(i)
                         variable += 1
@@ -119,7 +125,7 @@ while True:
             data = json.load(file)
             for i in data:
                 for key, value in i.items():
-                    if i[key] == my_answ:
+                    if i[key] == my_answ and key == "city":
                         print("Ось данні про особу що ви просили: ")
                         print(i)
                         variable += 1
@@ -175,7 +181,7 @@ while True:
             print("Невідома команда") 
             break
         for i in my_list:
-            for key, value in i.items():
+            for key, value in list(i.items()):
                 try:
                     if i[key] == my_answ and second_answ == "ім'я": 
                         i["First_name"] = third_answ
