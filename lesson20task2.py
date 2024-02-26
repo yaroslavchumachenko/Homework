@@ -28,7 +28,6 @@ class TestTelephoneDirectory(unittest.TestCase):
                         print(i)
         self.assertEqual(fake_stdout.getvalue(), expected_output)
 
-    # Write similar test cases for other functionalities
 
 if __name__ == "__main__":
     unittest.main()
