@@ -11,4 +11,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
     data, _ = s.recvfrom(1024)
     uppercase = data.decode()
 
-print('Received', uppercase)
+print('You received encoded message and it is: ' , uppercase)
